@@ -11,3 +11,11 @@ jobs:
     steps:
       - name: Ping Hugging Face
         run: curl -I https://saqibmurtaza-chainlit-shopping-agent.hf.space
+      - name: Ping All Spaces
+        run: |
+          echo "Pinging Shopping Agent..."
+          curl -I https://saqibmurtaza-chainlit-shopping-agent.hf.space
+          
+          echo "Pinging Student AI..."
+          curl -I https://saqibmurtaza-student-ai-tool.hf.space
+          
