@@ -1,0 +1,13 @@
+name: Keep HF Space Awake
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every 24 hours
+  workflow_dispatch:   # This adds the manual "Play" button
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Hugging Face
+        run: curl -I https://saqibmurtaza-chainlit-shopping-agent.hf.space
